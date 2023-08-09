@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <img src="https://user.oc-static.com/upload/2019/10/22/15717382019055_Capture%20d%E2%80%99e%CC%81cran%202019-10-22%20a%CC%80%2011.50.29.png">
+    <br>
+    <form action="detect" method="post">
+        {% for message in get_flashed_messages() %}
+             <p>{{ message }}</p>
+         {% endfor %}
+        <br>
+        <input type="text" name="name_input">
+        <br>
+        <input type="submit" value="DETECT" id="detect">
+    </form>
+</body>
+</html>
