@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, flash
 import pickle
 from nlp_processing import natural_language_processing
-from tensorflow.keras.models import load_model
 
 
 app = Flask(__name__)
